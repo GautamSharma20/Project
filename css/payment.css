@@ -1,0 +1,279 @@
+
+   @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+   *{
+     margin: 0;
+     padding: 0;
+     box-sizing: border-box;
+   }
+   body{
+     height: 100vh;
+     display: flex;
+     align-items: center;
+     justify-content: center;
+     background-color: #F4EEE5;
+     background-image: url('../images/pay-3.jpg');
+     background-repeat: no-repeat;
+   }
+   ::selection{
+     background: #3B4552;
+     color: #212325;
+   }
+   .pay-container{
+     max-width: 950px;
+     width: 100%;
+     padding: 40px 50px  40px  40px;
+     background: #212325;
+     margin: 0 20px;
+     border-radius: 12px;
+     box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+   }
+   .pay-container .topic{
+     font-size: 30px;
+     font-weight: 500;
+     margin-bottom: 20px;
+   }
+   .content{
+     display: flex;
+     align-items: center;
+     justify-content: space-between;
+   }
+   .content .list{
+     display: flex;
+     flex-direction: column;
+     width: 20%;
+     margin-right: 50px;
+     position: relative;
+   }
+   .content .list label{
+     height: 60px;
+     font-size: 22px;
+     font-weight: 500;
+     line-height: 60px;
+     cursor: pointer;
+     padding-left: 25px;
+     transition: all 0.5s ease;
+     color: rgb(15, 15, 15);
+     z-index: 12;
+   }
+   #Bank-card:checked ~ .list label.Bank-card,
+   #Net-Banking:checked ~ .list label.Net-Banking,
+   #help:checked ~ .list label.help,
+   #code:checked ~ .list label.code,
+   #about:checked ~ .list label.about{
+     color: black;
+   }
+   .content .list label:hover{
+     color: #3B4552;
+   }
+   .content .slider{
+     position: absolute;
+     left: 0;
+     top: 0;
+     height: 60px;
+     width: 100%;
+     border-radius: 12px;
+     background: #3B4552;
+     transition: all 0.4s ease;
+     color: black;
+   }
+   #Bank-card:checked ~ .list .slider{
+     top: 0;
+   }
+   #Net-Banking:checked ~ .list .slider{
+     top: 60px;
+   }
+   #help:checked ~ .list .slider{
+     top: 120px;
+   }
+   #code:checked ~ .list .slider{
+     top: 180px;
+   }
+   #about:checked ~ .list .slider{
+     top: 240px;
+   }
+   .content .text-content{
+     width: 80%;
+     height: 100%;
+   }
+   .content .text{
+     display: none;
+   }
+   .content .text .title{
+     font-size: 25px;
+     margin-bottom: 10px;
+     font-weight: 500;
+     margin-top: -255px;
+     margin-left: 30px;
+   }
+   
+   .content .text .Net-Banking{
+     font-size: 25px;
+     margin-bottom: 10px;
+     font-weight: 500;
+     margin-top: -255px;
+     margin-left: 30px;
+   }
+   .content .text p{
+     text-align: justify;
+     margin-left: 30px;
+   }
+   .content .text-content .Bank-card{
+     display: block;
+     color: black;
+   }
+   #Bank-card:checked ~ .text-content .Bank-card,
+   #Net-Banking:checked ~ .text-content .Net-Banking,
+   #help:checked ~ .text-content .help,
+   #code:checked ~ .text-content .code,
+   #about:checked ~ .text-content .about{
+     display: block;
+     color: black;
+   }
+   #Net-Banking:checked ~ .text-content .Bank-card,
+   #help:checked ~ .text-content .Bank-card,
+   #code:checked ~ .text-content .Bank-card,
+   #about:checked ~ .text-content .Bank-card{
+     display: none;
+     color: black;
+   }
+   .content .btn{
+     display: none;
+   }
+   
+   /* Card */
+   @import url('https://fonts.googleapis.com/css?family=Work+Sans');
+   
+   .pay-card{
+     background:#16181a;  border-radius:14px; max-width: 300px; display:block; margin:auto;
+     padding:60px; padding-left:20px; padding-right:20px;box-shadow: 2px 10px 40px black; z-index:99;
+   }
+   
+   .logo-card{max-width:50px; margin-bottom:15px; margin-top: -19px;}
+   
+   label{display:flex; font-size:10px; color:white; opacity:.4;}
+   
+   input{font-family: 'Work Sans', sans-serif;background:transparent; border:none; border-bottom:1px solid transparent; color:#dbdce0; transition: border-bottom .4s;}
+   input:focus{border-bottom:1px solid #1abc9c; outline:none;}
+   
+   .cardnumber{display:block; font-size:20px; margin-bottom:8px; }
+   
+   .name{display:block; font-size:15px; max-width: 200px; float:left; margin-bottom:15px;}
+   
+   .toleft{float:left;}
+   .ccv{width:50px; margin-top:-5px; font-size:15px;}
+  
+   @media (max-width: 600px){
+     .proceed{transform:translate(250px, 10px);}
+     .col{display:block; margin:auto; width:100%; text-align:center;}
+   }
+   
+   /* form */
+   .email input[type=email] {
+     width: 300px;
+     padding: 12px 20px;
+     margin: 8px 0;
+     box-sizing: border-box;
+     border: 3px solid #f8bf14;
+     -webkit-transition: 0.5s;
+     transition: 0.5s;
+     outline: none;
+     border-radius: 30px;
+     color: rgb(228, 228, 228);
+   }
+   
+   input[type=email]:focus {
+     border: 3px solid #f8bf14;
+   }
+   
+   input[type=email] {
+     visibility: visible;
+   }
+   
+   /* pay amount */
+   .pay input[type=number] {
+     width: 205px;
+     padding: 12px 20px;
+     margin: 8px 0;
+     box-sizing: border-box;
+     border: 3px solid #f8bf14;
+     -webkit-transition: 0.5s;
+     transition: 0.5s;
+     outline: none;
+     border-radius: 30px;
+     color: rgb(228, 228, 228);
+   }
+   
+   .pay input[type=number]:focus {
+     border: 3px solid #f8bf14;
+   }
+   
+   .pay input[type=number] {
+     visibility: visible;
+   }
+   
+   /* form btn */
+   form .ebtn {
+     background-color: #f8bf14;
+     border: none;
+     color: #212325;
+     padding: 10px 100px;
+     text-align: center;
+     text-decoration: none;
+     display: inline-block;
+     font-size: 16px;
+     border-radius: 30px;
+   }
+   
+   
+   /* drodown list */
+   .box {
+     position: absolute;
+     /* top: 50%; */
+     left: 730px;
+     /* transform: translate(-50%, -50%); */
+     border-radius: 30px;
+   }
+   
+   .box select {
+     background-color: #3B4552;
+     color: white;
+     padding: 12px;
+     width: 310px;
+     border: none;
+     font-size: 20px;
+     box-shadow: 0 5px 25px rgba(0, 0, 0, 0.2);
+     -webkit-appearance: button;
+     appearance: button;
+     outline: none;
+     border-radius: 30px;
+   }
+   
+   .box::before {
+     content: "\f13a";
+     font-family: FontAwesome;
+     position: absolute;
+     top: 0;
+     right: 0;
+     width: 20%;
+     height: 100%;
+     text-align: center;
+     font-size: 28px;
+     line-height: 45px;
+     color: rgba(255, 255, 255, 0.5);
+     background-color: rgba(255, 255, 255, 0.1);
+     pointer-events: none;
+     border-radius: 30px;
+   }
+   
+   .box:hover::before {
+     color: rgba(255, 255, 255, 0.6);
+     background-color: rgba(255, 255, 255, 0.2);
+     border-radius: 30px;
+   }
+   
+   .box select option {
+     padding: 30px;
+     border-radius: 30px;
+   }
+   
+   

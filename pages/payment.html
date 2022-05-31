@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Help-u || Payment</title>
+    <link rel="stylesheet" href="../css/payment.css">
+    <link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon/favicon-16x16.png">
+    <link rel="manifest" href="/favicon/site.webmanifest">
+</head>
+
+<body>
+    
+    <!-- main -->
+    <div class="pay-container">
+        <!-- <div class="topic">CSS Vertical Tabs.</div> -->
+        <div style="color: white;">
+            <img src="../images/logo.png" alt="logo" style="height: 50px; width: 50px;">
+            <h5 style="margin-bottom:5px">help-u</h5><br>
+            <p>I want to Donate</p>
+            <div class="pay">
+                <form action="">
+                    <input type="number" placeholder="In US Dollar" min="25" max="100,000">
+                </form>
+            </div>
+            <div class="pay-btn" style="height: 10px;">
+                <a href="https://www.paypal.com/in/signin" target="_blank">
+                    <img src="../images/paypal.png"
+                        style="height: 82px; width: 220px; margin-left: -10px; margin-top: -13px;"></a>
+            </div><br><br>
+            <p style="margin-top:5px; margin-bottom: 13px; margin-right: 13px;">Or pay with</p>
+        </div>
+        <div class="content">
+            <input type="radio" name="slider" checked id="Bank-card" class="btn">
+            <input type="radio" name="slider" id="Net-Banking" class="btn">
+            <div class="list">
+                <label for="Bank-card" class="Bank-card">
+                    <i class="fas fa-home"></i>
+                    <span class="title" style="color: white;">Card</span>
+                </label>
+                <label for="Net-Banking" class="Net-Banking">
+                    <span class="icon"><i class="fas fa-blog"></i></span>
+                    <span class="title" style="color: white;">Net Bank</span>
+                </label>
+                <label for="Net-Banking" class="Net-Banking">
+                </label>
+                <div class="slider"></div>
+            </div>
+            <div class="text-content" style="color: white;">
+                <div class="Bank-card text" style="color: white;">
+                    <div class="title">Pay with Card</div>
+                    <!-- partial:index.partial.html -->
+                    <div class="pay-container" style="background-color: #212325;">
+                        <form action="" onsubmit="return validateForm()" style="text-align: center;">
+                            <div class="pay-card">
+                                <img src="https://seeklogo.com/images/V/VISA-logo-62D5B26FE1-seeklogo.com.png"
+                                    class="logo-card">
+                                <label>Card number:</label>
+                                <input id="user" type="number" class="input cardnumber"
+                                    placeholder="12xx xxxx xxxx xxxx" maxlength="14" required>
+                                <label>Name:</label>
+                                <input class="input name" type="text" placeholder="Name" required>
+                                <label class="toleft">CCV:</label>
+                                <input type="password" class="input toleft ccv" placeholder="xxx" required>
+                            </div><br>
+
+                            <div class="email" style="align-content: center;">
+                                <div>
+                                    <input type="email" id="email" name="email" placeholder="Enter Your Email-Adress"
+                                        required><br>
+                                </div>
+                                <button class="ebtn" style="color: black;"><input type="submit"
+                                        value="Confirm Payment"></button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                <!-- </div> -->
+                <div class="Net-Banking text" style="color: white;">
+                    <div class="title" style="margin-top: -340px;">Pay With Net Banking</div>
+                    <div class="pay-container" style="background-color: #212325;">
+                        <div class="email" style="align-content: center;">
+                            <div class="box">
+                                <select>
+                                    <option>Select Your Bank</option>
+                                    <option>Punjab National BAnk</option>
+                                    <option>Yes Bank</option>
+                                    <option>United States Bank </option>
+                                    <option>J&K Bank</option>
+                                </select>
+                            </div><br><br><br>
+                            <form action="" onsubmit="return validateForm()" style="text-align: center;">
+                                <div class="email" style="align-content: center;">
+                                    <div>
+                                        <input type="email" id="email" name="email"
+                                            placeholder="Enter Your Email-Adress" required><br>
+                                    </div>
+                                    <button class="ebtn" style="color: black;"><input type="submit"
+                                            value="Confirm Payment""></button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    </div>
+    
+    <script src=" /js/main.js"></script>
+
+</body>
+
+</html>
